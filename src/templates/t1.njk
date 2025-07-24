@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" class="select-none">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ Meta_description | default('') | markdown | safe }}">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="/assets/nav-icon/favicon-32x32.png" type="image/png">
+    <link rel="canonical" href="{{ Canonical | markdown | safe }}">
+    <title>{{ Title | markdown | safe }}</title>
+    <link rel="stylesheet" href="/output.css" />
+    <link rel="stylesheet" href="/styles/font.css" />
+    <script async 
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2645469193065127"
+      crossorigin="anonymous"></script>
+  </head>
+
+  <body class="dark:bg-[#121212] dark:text-[#E0E0E0] transition-all duration-300">
+    <!-- nav bar Container -->
+    <header class="sticky top-0 left-0 right-0 z-50">
+      {% include "navbar.html" %}
+    </header>
+    <!-- nav bar Container -->
+    
+    <h2 class="md:text-2xl text-[18px] lg:px-70 md:px-10 px-3 mt-7">
+      {{ BCA_Semester | default('') | markdown | safe }}
+    </h2>
+    <h1 class="md:text-2xl text-[18px] lg:px-70 md:px-10 px-3 underline">
+      {{ H1 | markdown | safe }}
+    </h1>
+
+    <!-- question paper section -->
+    <main class="mt-4 lg:px-70 md:px-10 px-3 z-0 font-serif font-semibold">
+      <!-- title section start here -->
+      <section class="text-[11px] md:text-[14px] relative">
+        <div class="flex gap-10 md:gap-40 wrap-0">
+          <img
+            src="/assets/nav-icon/tu.svg"
+            class="h-25 w-25"
+            alt="tribhuvan university logo"
+          />
+          <h4 class="font-bold text-[17px] md:text-2xl">Tribhuvan University</h4>
+        </div>
+
+        <div class="flex justify-between">
+          <div>
+            <h3>Bachelor In Computer Application</h3>
+            <h3>Course Title: {{ Subject | default('') | markdown | safe }}</h3>
+            <h3>Code No: {{ Subject_code | default('') | markdown | safe }}</h3>
+            <h3>Semester: {{ Semester | default('') | markdown | safe }}</h3>
+            <h3 class="absolute top-[20%] left-[50%] text-lg lg:text-xl">
+              Year: {{ Year | default('') | markdown | safe }}
+            </h3>
+          </div>
+          <div class="flex flex-col">
+            <span>Full Marks: 60</span>
+            <span>Pass Marks: 24</span>
+            <span>Time: 3 hours</span>
+          </div>
+        </div>
+
+        <p class="md:text-[16px]">
+          Candidates are required to answer the question in their own words as
+          far as possible.
+        </p>
+
+        <div class="ml-[50%]">Group B</div>
+
+        <div class="flex justify-between">
+          <div class="md:text-[17px] text-[14px]">Attempt any SIX questions</div>
+          <div>[6x5=30]</div>
+        </div>
+      </section>
+      <!-- title section end here -->
+
+      <article class="font-normal text-[15px] md:text-[17px]">
+        <!-- Q.N. 11 -->
+        <div
+          class="flex gap-2 group cursor-pointer"
+          onclick="handleMobileClick(event)"
+        >
+          <span>11. </span>
+          <div class="md:flex relative">
+            <div class="inline">
+              <p class="question-text inline">{{ question_11 | default('') | markdown | safe }}</p>
+            </div>
+            <button
+              id="icon"
+              class="cursor-pointer opacity-0 md:group-hover:opacity-100 transition-all py-0 mr-1 bg-white"
+              onclick="copyQuestion(this)"
+            >
+              <img
+                src="/assets/nav-icon/Clipboard-light.svg"
+                class="block dark:hidden copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+              <img
+                src="/assets/nav-icon/Clipboard-dark.svg"
+                class="hidden dark:block copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- Q.N. 12 -->
+        <div
+          class="flex gap-2 group cursor-pointer"
+          onclick="handleMobileClick(event)"
+        >
+          <span>12. </span>
+          <div class="md:flex relative">
+            <div class="inline">
+              <p class="question-text inline">{{ question_12 | default('') | markdown | safe }}</p>
+            </div>
+            <button
+              id="icon"
+              class="cursor-pointer opacity-0 md:group-hover:opacity-100 transition-all py-0 mr-1 bg-white"
+              onclick="copyQuestion(this)"
+            >
+              <img
+                src="/assets/nav-icon/Clipboard-light.svg"
+                class="block dark:hidden copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+              <img
+                src="/assets/nav-icon/Clipboard-dark.svg"
+                class="hidden dark:block copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- Q.N. 13 -->
+        <div
+          class="flex gap-2 group cursor-pointer"
+          onclick="handleMobileClick(event)"
+        >
+          <span>13. </span>
+          <div class="md:flex relative">
+            <div class="inline">
+              <p class="question-text inline">{{ question_13 | default('') | markdown | safe }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q.N. 14 -->
+        <div
+          class="flex gap-2 group cursor-pointer"
+          onclick="handleMobileClick(event)"
+        >
+          <span>14. </span>
+          <div class="md:flex relative">
+            <div class="inline">
+              <p class="question-text inline">{{ question_14 | default('') | markdown | safe }}</p>
+            </div>
+            <button
+              id="icon"
+              class="cursor-pointer opacity-0 md:group-hover:opacity-100 transition-all py-0 mr-1 bg-white"
+              onclick="copyQuestion(this)"
+            >
+              <img
+                src="/assets/nav-icon/Clipboard-light.svg"
+                class="block dark:hidden copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+              <img
+                src="/assets/nav-icon/Clipboard-dark.svg"
+                class="hidden dark:block copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- Q.N. 15 -->
+        <div
+          class="flex gap-2 group cursor-pointer"
+          onclick="handleMobileClick(event)"
+        >
+          <span>15. </span>
+          <div class="md:flex relative">
+            <div class="inline">
+              <p class="question-text inline">{{ question_15 | default('') | markdown | safe }}</p>
+            </div>
+            <button
+              id="icon"
+              class="cursor-pointer opacity-0 md:group-hover:opacity-100 transition-all py-0 mr-1 bg-white"
+              onclick="copyQuestion(this)"
+            >
+              <img
+                src="/assets/nav-icon/Clipboard-light.svg"
+                class="block dark:hidden copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+              <img
+                src="/assets/nav-icon/Clipboard-dark.svg"
+                class="hidden dark:block copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- Q.N. 16 -->
+        <div
+          class="flex gap-2 group cursor-pointer"
+          onclick="handleMobileClick(event)"
+        >
+          <span>16. </span>
+          <div class="md:flex relative">
+            <div class="inline">
+              <p class="question-text inline">{{ question_16 | default('') | markdown | safe }}</p>
+            </div>
+            <button
+              id="icon"
+              class="cursor-pointer opacity-0 md:group-hover:opacity-100 transition-all py-0 mr-1 bg-white"
+              onclick="copyQuestion(this)"
+            >
+              <img
+                src="/assets/nav-icon/Clipboard-light.svg"
+                class="block dark:hidden copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+              <img
+                src="/assets/nav-icon/Clipboard-dark.svg"
+                class="hidden dark:block copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- Q.N. 17 -->
+        <div
+          class="flex gap-2 group cursor-pointer"
+          onclick="handleMobileClick(event)"
+        >
+          <span>17. </span>
+          <div class="md:flex relative">
+            <div class="inline">
+              <p class="question-text inline">{{ question_17 | default('') | markdown | safe }}</p>
+            </div>
+            <button
+              id="icon"
+              class="cursor-pointer opacity-0 md:group-hover:opacity-100 transition-all py-0 mr-1 bg-white"
+              onclick="copyQuestion(this)"
+            >
+              <img
+                src="/assets/nav-icon/Clipboard-light.svg"
+                class="block dark:hidden copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+              <img
+                src="/assets/nav-icon/Clipboard-dark.svg"
+                class="hidden dark:block copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- Group C -->
+        <span class="font-semibold ml-[50%]">Group C</span>
+        <div class="flex justify-between font-semibold">
+          <p>Attempt any TWO questions</p>
+          <span>[2x10=20]</span>
+        </div>
+
+        <!-- Q.N. 18 -->
+        <div
+          class="flex gap-2 group cursor-pointer"
+          onclick="handleMobileClick(event)"
+        >
+          <span>18. </span>
+          <div class="md:flex relative">
+            <div class="inline">
+              <p class="question-text inline">{{ question_18 | default('') | markdown | safe }}</p>
+            </div>
+            <button
+              id="icon"
+              class="cursor-pointer opacity-0 md:group-hover:opacity-100 transition-all py-0 mr-1 bg-white"
+              onclick="copyQuestion(this)"
+            >
+              <img
+                src="/assets/nav-icon/Clipboard-light.svg"
+                class="block dark:hidden copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+              <img
+                src="/assets/nav-icon/Clipboard-dark.svg"
+                class="hidden dark:block copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- Q.N. 19 -->
+        <div
+          class="flex gap-2 group cursor-pointer"
+          onclick="handleMobileClick(event)"
+        >
+          <span>19. </span>
+          <div class="md:flex relative">
+            <div class="inline">
+              <p class="question-text inline">{{ question_19 | default('') | markdown | safe }}</p>
+            </div>
+            <button
+              id="icon"
+              class="cursor-pointer opacity-0 md:group-hover:opacity-100 transition-all py-0 mr-1 bg-white"
+              onclick="copyQuestion(this)"
+            >
+              <img
+                src="/assets/nav-icon/Clipboard-light.svg"
+                class="block dark:hidden copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+              <img
+                src="/assets/nav-icon/Clipboard-dark.svg"
+                class="hidden dark:block copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- Q.N. 20 -->
+        <div
+          class="flex gap-2 group cursor-pointer"
+          onclick="handleMobileClick(event)"
+        >
+          <span>20. </span>
+          <div class="md:flex relative">
+            <div class="inline">
+              <p class="question-text inline">{{ question_20 | default('') | markdown | safe }}</p>
+            </div>
+            <button
+              id="icon"
+              class="cursor-pointer opacity-0 md:group-hover:opacity-100 transition-all py-0 mr-1 bg-white"
+              onclick="copyQuestion(this)"
+            >
+              <img
+                src="/assets/nav-icon/Clipboard-light.svg"
+                class="block dark:hidden copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+              <img
+                src="/assets/nav-icon/Clipboard-dark.svg"
+                class="hidden dark:block copy-icon w-7 absolute bottom-[-2px] md:bottom-[2px]"
+                alt="copy to clipboard"
+              />
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- copied popup message div -->
+      <div
+        id="copy-notification"
+        class="fixed bottom-4 ml-[50%] md:ml-50 -translate-x-1/2 opacity-0 invisible transition-all duration-400 bg-indigo-600 dark:bg-gray-700 text-white p-4 rounded-lg text-sm shadow-lg"
+      >
+        Copied!
+      </div>
+    </main>
+
+    <footer class="z-50 w-full mt-[100px] md:mt-[150px]">
+      {% include "footer.html" %}
+    </footer>
+
+    <!-- java scripts -->
+    <script src="/JavaScript/GoogleAnalytics.js"></script>
+    <script src="/JavaScript/copyQuestion.js"></script>
+    <script src="/JavaScript/nav_bar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+Eleventy is very useful for creating static site
+
+we can design a template creat parsable variables i.e {{ titel }} , {{ Content || Safe }}
+
+and we can input our data, blog to markdown file using template layout which to be used
+
+
+---
+layout: t1.njk
+Title: "Hi world"
+Meta_description: "I am important for Seo"
+
+content: |
+    multi line input
+---
+
+
+
+
+
